@@ -8,7 +8,7 @@ DECLARE_MULTICAST_DELEGATE_TwoParams(FFlowTriggerComponentEvent, const bool /*bO
 /**
 * Trigger-specific Flow component - encapsulates communication between triggers and Flow graph
 */
-UCLASS(MinimalAPI)
+UCLASS(meta = (BlueprintSpawnableComponent))
 class UFlowTriggerComponent final : public UFlowComponent
 {
 	GENERATED_UCLASS_BODY()
