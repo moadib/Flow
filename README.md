@@ -9,6 +9,7 @@ It's s design-agnostic event node editor.
 ![Flow101](https://user-images.githubusercontent.com/5065057/103543817-6d924080-4e9f-11eb-87d9-15ab092c3875.png)
 
 * A single node in this graph is a simple UObject, not a function like in blueprints. This allows you to encapsulate the entire gameplay element (logic with its data) within a single Flow Node. The idea is that your write a repeatable "event script" only once for the entire game!
+* Unlike blueprints, Flow Node is async/latent by design. Active node usually subscribe to delegates, so it can react to event by triggering output pin (or whatever you choose to).
 * Every node defines its own set of input/output pins. It's dead simple to design the flow of the game - just connect nodes representing features.
 * Developers creating a Flow Node can call the execution of pins any way they need. API is extremely simple.
 * Editor supports convenient displaying debug information on nodes and wires while playing a game. You simply provide what kind of message would be displayed over active Flow Nodes - you can't have that with blueprint functions.
